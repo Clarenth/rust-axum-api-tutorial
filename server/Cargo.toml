@@ -3,15 +3,29 @@ name = "server"
 version = "0.1.0"
 edition = "2021"
 
+# vid: https://www.youtube.com/watch?v=XZtlD_m59sM
+# timestamp: 56:00
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+# tokio
 tokio ={ version = "1", features = ['full']}
+
 # Axum
 axum = "0.6"
+tower-http = { version = "0.4", features = ["fs"]}
+tower-cookies = "0.9"
+
 # Serde / json
-serde ={ version = "1", features = ["derive"]}
+serde = { version = "1", features = ["derive"]}
 serde_json = "1"
+
+# Regex
+lazy-regex = "2"
+
+# async
+async-trait = "0.1"
 
 [dev-dependencies]
 anyhow = "1"
